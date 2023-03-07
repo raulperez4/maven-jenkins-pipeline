@@ -26,7 +26,7 @@ pipeline {
       stage('Sonarqube Analysis - SAST') {
             steps {
                   withSonarQubeEnv('SonarQube') {
-           sh "mvn sonar:sonar 
+           sh "mvn sonar:sonar"
                 }
            timeout(time: 2, unit: 'MINUTES') {
                       script {

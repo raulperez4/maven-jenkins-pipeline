@@ -28,9 +28,9 @@ pipeline {
             steps {
                   withSonarQubeEnv('SonarQube') {
                   sh "mvn clean verify sonar:sonar \
-                     -Dsonar.projectKey=sonarqube \
-                     -Dsonar.host.url=http://raul-jenkins-lb-689716188.us-                east-1.elb.amazonaws.com:9000 \
-                     -Dsonar.login=sqp_47086855ace824bc986e8e468e6bd0085fa25606"
+                     -Dsonar.projectKey=Sonarqube-test \
+                     -Dsonar.host.url=http://ec2-54-157-253-76.compute-1.amazonaws.com:9000 \
+                     -Dsonar.login=sqp_6be5bb54d24b53c752bb2e9a203333e77add7734"
                   }
               timeout(time: 2, unit: 'MINUTES') {
                 script {

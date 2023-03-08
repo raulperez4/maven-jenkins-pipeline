@@ -29,7 +29,7 @@ pipeline {
                   withSonarQubeEnv('SonarQube') {
                   sh "mvn sonar:sonar \
                   -Dsonar.projectKey=maven-jenkins-pipeline \
-                  -Dsonar.host.url=http://jenkins.orexe.biz:9000"
+                  -Dsonar.host.url=http://ec2-44-213-110-180.compute-1.amazonaws.com:9000/"
                   }
               timeout(time: 2, unit: 'MINUTES') {
                 script {

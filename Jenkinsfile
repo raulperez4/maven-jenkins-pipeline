@@ -30,6 +30,7 @@ pipeline {
                   sh "mvn sonar:sonar \
                               -Dsonar.projectKey=maven-jenkins-pipeline \
   -Dsonar.host.url=http://ec2-44-213-110-180.compute-1.amazonaws.com:9000"
+-Dsonar.login=sqp_47086855ace824bc986e8e468e6bd0085fa25606"
                   }
               timeout(time: 2, unit: 'MINUTES') {
                 script {
